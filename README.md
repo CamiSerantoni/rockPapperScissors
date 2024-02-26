@@ -1,4 +1,4 @@
-# Piedra 🪨, papel 🧾 o...tijeras ✂️ ...Cachipún!
+# Piedra 🪨, papel 🧾 y...tijeras ✂️ ...Cachipún!
 
 Es una pequeña página con la idea de aplicar el conocimiento básico de Javascript, 
 
