@@ -1,10 +1,12 @@
+
+
+//Como mi objetivo es que cargue primero el HTML espero que se cargue para avanzar con el JS
 document.addEventListener("DOMContentLoaded", function () {
-  // Función que genera un número aleatorio entre min (incluido) y max (excluido)
   function generarAleatorio() {
-    return Math.round(Math.random() * 2);
+    return Math.floor(Math.random() * 3);
   }
 
-  // Iniciar juego
+  // Inicia juego
   alert("Bienvenido/a: inicia el juego.");
 
   let jugar = true;
@@ -13,17 +15,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   while (jugar) {
     // Preguntar cuántas veces desea jugar
-    let numVeces = prompt("¿Cuántas veces deseas jugar?");
-    numVeces = parseInt(numVeces);
+    let numVecesAJugar = prompt("¿Cuántas veces deseas jugar?");
+    numVecesAJugar = parseInt(numVecesAJugar);
 
     // Verificar si el número de veces es válido
-    if (isNaN(numVeces) || numVeces <= 0) {
+    if (isNaN(numVecesAJugar) || numVecesAJugar <= 0) {
       alert("Número de veces inválido. Inténtalo de nuevo.");
       continue;
     }
 
     // Iniciar bucle para jugar el número de veces indicado
-    for (let i = 0; i < numVeces; i++) {
+    for (let i = 0; i < numVecesAJugar; i++) {
       // Iniciar elección de jugadores
       let usuario = prompt(
         "Escribe 0 para Piedra 🪨, 1 para Papel 🧾 o 2 para Tijeras ✂️"
@@ -66,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
           break;
       }
 
-      // Mostrar resultado
+      // Mostrar resultado 
       if (usuario === computador) {
         alert("Empate 😒");
       } else if (
@@ -81,17 +83,17 @@ document.addEventListener("DOMContentLoaded", function () {
         puntajeComputador++;
       }
 
-      if (i === numVeces - 1) {
+      if (i === numVecesAJugar - 1) {
         alert("Última ronda. El juego se detendrá después de esta ronda.");
       }
     } // Fin del bucle para jugar el número de veces indicado
 
     // Mostrar alerta con puntajes
     alert(
-      `Puntaje final:\nUsuario  🙂: ${puntajeUsuario}\nComputador 💻: ${puntajeComputador}`
+      `Puntaje final de la batalla 🚩:\nUsuario  🙂: ${puntajeUsuario}\nComputador 💻: ${puntajeComputador}`
     );
 
-    // Preguntar si desea jugar de nuevo
+    // Preguntar a usario/a si desea jugar otra vez
     jugar = confirm("¿Quieres jugar otra vez?");
   }
 
