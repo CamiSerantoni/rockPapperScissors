@@ -7,54 +7,105 @@
   <meta name="description" content="Descripción del sitio" />
   <meta name="author" content="Camila Serantoni R." />
   <title>Desafío Cachipún</title>
-  <!-- Agrega Fonts Google-->
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css" />
-  <!--Agrega  Awesome-->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
     integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
-  <!-- Bootstrap-->
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-  <!-- Local Style-->
+  <!-- Local Style -->
   <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
 
 <body>
+  <!-- Navigation Bar -->
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Desafío Cachipún</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#rules">Reglas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#play">Jugar</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
   <div class="container">
-    <header class="m-5">
-      <h1 class="text-center fs-1 mb-3"> Piedra 🪨, papel 🧾 y...tijeras ✂️ </h1>
-    </header>
+<header class="d-flex align-items-center justify-content-center text-white py-5 mb-5" style="background-color: rgba(0, 128, 0, 0.062);">
+  <h1 class="text-center fs-1 mb-3"> Piedra 🪨, papel 🧾 y...tijeras ✂️ </h1>
+</header>
 
-
-    <section class="d-flex justify-content-between align-items-center rules">
-      <img id="machine-img" src="img/rock.svg">
+    <section class="d-flex justify-content-between align-items-center rules mt-5">
+   
+      <img id="machine-img" src="img/rock.svg" alt="Machine">
 
       <div class="fs-2 d-flex text-center my-3">
         Para empezar...escoge una opción!
       </div>
 
-      <img id="user-img" src="img/rock.svg">
+      <img id="user-img" src="img/scissors.svg" alt="User">
     </section>
 
-    <section class="text-center bg-success p-4 mb-4">
-      <h4>¿Conoces las reglas del juego?</h4>
-      <h5>La piedra aplasta la tijera. (Gana la piedra.)</h5>
-      <h5>El papel envuelve la piedra. (Gana el papel.)</h5>
-      <h5>La tijera corta el papel. (Gana la tijera.)</h5>
-      <h5> En caso de empate (que dos jugadores elijan el mismo elemento o que tres jugadores elijan cada uno un objeto
-        distinto), se juega otra vez.</h5>
-    </section>
+  <section class="mt-5" id="rules">
+  <h4 class="text-center mb-4">¿Conoces las reglas del juego?</h4>
+  <div class="row">
+    <div class="col-sm-6 col-lg-3 mb-4">
+      <div class="card bg-success text-white">
+        <div class="card-body">
+          <h5 class="card-title">Regla 1</h5>
+          <p class="card-text">La piedra aplasta la tijera. (Gana la piedra.)</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-3 mb-4">
+      <div class="card bg-success text-white">
+        <div class="card-body">
+          <h5 class="card-title">Regla 2</h5>
+          <p class="card-text">El papel envuelve la piedra. (Gana el papel.)</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-3 mb-4">
+      <div class="card bg-success text-white">
+        <div class="card-body">
+          <h5 class="card-title">Regla 3</h5>
+          <p class="card-text">La tijera corta el papel. (Gana la tijera.)</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-3 mb-4">
+      <div class="card bg-success text-white">
+        <div class="card-body">
+          <h5 class="card-title">Regla 4</h5>
+          <p class="card-text">En caso de empate (que dos jugadores elijan el mismo elemento o que tres jugadores elijan cada uno un objeto distinto), se juega otra vez.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <footer class="text-center">Made with ❤️ by Camila Serantoni R.</a></footer>
 
   </div>
 
-  <!-- Incorporación de Bootstrap JS desde CDN (opcional) -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script> -->
+    crossorigin="anonymous"></script>
   <script src="assets/js/script.js"></script>
 </body>
 
